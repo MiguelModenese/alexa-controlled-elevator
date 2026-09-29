@@ -16,9 +16,9 @@ O controle do sistema é executado por um Controlador Lógico Programável (CLP)
 
 A camada de acessibilidade e inteligência IoT é viabilizada pelo **Node-RED**, que estabelece a comunicação bidirecional entre o CLP e a **Amazon Alexa**, permitindo a chamada dos andares e o monitoramento do sistema totalmente por comando de voz. O resultado é um protótipo funcional, flexível e focado na convergência entre tecnologia industrial e inclusão social.
 
-> 📷 **[ Maquete Física do Elevador e Painel de Automação ]**
+> 📷 ** Maquete Física do Elevador e Painel de Automação **
 > 
-> ![Maquete do Elevador](docs/maquete_elevador.jpg)
+> ![Maquete do Elevador](docs/maquete_elevador.jpeg)
 
 ---
 
@@ -29,7 +29,7 @@ A maioria dos elevadores depende exclusivamente de botoeiras físicas para a nav
 
 A proposta deste projeto é unir a confiabilidade da automação industrial — utilizando o CLP Siemens S7-1200 e motor de passo — ao acionamento por voz via Amazon Alexa, além de uma IHM no computador para parametrização. Com essa estrutura, o elevador funciona de forma totalmente *hands-free* (sem uso das mãos), eliminando a dependência de botões físicos e oferecendo uma alternativa acessível para qualquer perfil de usuário.
 
-> 📷 **[ Diagrama de Integração do Sistema ]**
+> 📷 ** Diagrama de Integração do Sistema **
 > 
 > ![Diagrama de Integração](docs/diagrama_integracao.jpg)
 
@@ -75,7 +75,7 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 * **Seleção do Material:** A estrutura principal da maquete foi construída em **policarbonato**, escolhido pela elevada resistência mecânica a impactos, rigidez estrutural e transparência — permitindo a visualização clara dos mecanismos internos e da movimentação do elevador.
 * **Corte em Router CNC:** As peças em policarbonato foram usinadas via fresadora CNC a partir do projeto 3D. O processo fabril garantiu tolerâncias dimensionais exatas nos furos de fixação, nos encaixes da estrutura e nos suportes das guias lineares.
 
-> 📷 **[ Projeto CAD 3D no SolidWorks ]**
+> 📷 ** Projeto CAD 3D no SolidWorks **
 > 
 > ![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)
 
@@ -92,7 +92,7 @@ A programação do CLP Siemens S7-1200 foi desenvolvida em linguagem Ladder no T
   * **`FB2 (MOTOR BLOCK)`:** Bloco responsável pelo acionamento do eixo de movimento (`MOTOR1` / eixo PTO). Contém as instruções `MC_Power` (habilita o driver), `MC_MoveJog` (movimentação manual de subida/descida), `MC_Home` (zeramento de referência) e `MC_MoveAbsolute` (deslocamento absoluto para os 5 andares cadastrados).
   * **`FB1 (LAMPADAS)`:** Controla o acionamento das 4 lâmpadas de sinalização. Utiliza portas lógicas para permitir que as lâmpadas sejam ligadas tanto pelos botões da IHM (`IHM_LAMPADA_x`) quanto pelos comandos vindos do Node-RED.
 
-> 📷 **[ PRINT: Lógica Ladder no TIA Portal (OB1 / FB2 / FB1) ]**
+> 📷 ** Lógica Ladder no TIA Portal **
 > 
 > `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)
 
