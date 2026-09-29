@@ -18,7 +18,7 @@ A camada de acessibilidade e inteligência IoT é viabilizada pelo **Node-RED**,
 
 > 📷 **[ Maquete Física do Elevador e Painel de Automação ]**
 > 
-> `![Maquete do Elevador](docs/maquete_elevador.jpg)`
+> ![Maquete do Elevador](docs/maquete_elevador.jpg)
 
 ---
 
@@ -31,7 +31,7 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 
 > 📷 **[ Diagrama de Integração do Sistema ]**
 > 
-> `![Diagrama de Integração](docs/diagrama_integracao.jpg)`
+> ![Diagrama de Integração](docs/diagrama_integracao.jpg)
 
 ### 🎯 Objetivos
 * **Objetivo Geral:** Desenvolver um protótipo de elevador automatizado focado em acessibilidade, utilizando controle por voz e posicionamento parametrizável por software.
@@ -77,7 +77,7 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 
 > 📷 **[ Projeto CAD 3D no SolidWorks ]**
 > 
-> `![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)`
+> ![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)
 
 ---
 
@@ -94,7 +94,7 @@ A programação do CLP Siemens S7-1200 foi desenvolvida em linguagem Ladder no T
 
 > 📷 **[ PRINT: Lógica Ladder no TIA Portal (OB1 / FB2 / FB1) ]**
 > 
-> `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)`
+> `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)
 
 ---
 
@@ -111,7 +111,7 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
 
 > 📷 **[ Telas da Interface Homem-Máquina (IHM) ]**
 > 
-> `![Telas da IHM](docs/telas_ihm.jpg)`
+> ![Telas da IHM](docs/telas_ihm.jpg)
 
 ---
 
@@ -124,7 +124,7 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
 > 📷 **[ PRINT: Fluxo de Comunicação no Node-RED ]**
 > 
 > *Substitua este bloco pelo print do fluxo do Node-RED:*
-> `![Fluxo Node-RED](docs/fluxo_nodered.png)`
+> ![Fluxo Node-RED](docs/fluxo_nodered.png)
 
 ---
 
