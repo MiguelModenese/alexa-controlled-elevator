@@ -75,10 +75,6 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 * **Seleção do Material:** A estrutura principal da maquete foi construída em **policarbonato**, escolhido pela elevada resistência mecânica a impactos, rigidez estrutural e transparência — permitindo a visualização clara dos mecanismos internos e da movimentação do elevador.
 * **Corte em Router CNC:** As peças em policarbonato foram usinadas via fresadora CNC a partir do projeto 3D. O processo fabril garantiu tolerâncias dimensionais exatas nos furos de fixação, nos encaixes da estrutura e nos suportes das guias lineares.
 
-> 📷 Projeto CAD 3D no SolidWorks
-> 
-> ![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)
-
 ---
 
 ## 💻 Automação e Software
