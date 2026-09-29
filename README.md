@@ -16,8 +16,8 @@ O controle do sistema é executado por um Controlador Lógico Programável (CLP)
 
 A camada de acessibilidade e inteligência IoT é viabilizada pelo **Node-RED**, que estabelece a comunicação bidirecional entre o CLP e a **Amazon Alexa**, permitindo a chamada dos andares e o monitoramento do sistema totalmente por comando de voz. O resultado é um protótipo funcional, flexível e focado na convergência entre tecnologia industrial e inclusão social.
 
-> 📷 ** Maquete Física do Elevador e Painel de Automação **
-> 
+> 📷 Maquete Física do Elevador e Painel de Automação
+>
 > ![Maquete do Elevador](docs/maquete_elevador.jpeg)
 
 ---
@@ -29,7 +29,7 @@ A maioria dos elevadores depende exclusivamente de botoeiras físicas para a nav
 
 A proposta deste projeto é unir a confiabilidade da automação industrial — utilizando o CLP Siemens S7-1200 e motor de passo — ao acionamento por voz via Amazon Alexa, além de uma IHM no computador para parametrização. Com essa estrutura, o elevador funciona de forma totalmente *hands-free* (sem uso das mãos), eliminando a dependência de botões físicos e oferecendo uma alternativa acessível para qualquer perfil de usuário.
 
-> 📷 ** Diagrama de Integração do Sistema **
+> 📷 Diagrama de Integração do Sistema
 > 
 > ![Diagrama de Integração](docs/diagrama_integracao.jpg)
 
@@ -75,7 +75,7 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 * **Seleção do Material:** A estrutura principal da maquete foi construída em **policarbonato**, escolhido pela elevada resistência mecânica a impactos, rigidez estrutural e transparência — permitindo a visualização clara dos mecanismos internos e da movimentação do elevador.
 * **Corte em Router CNC:** As peças em policarbonato foram usinadas via fresadora CNC a partir do projeto 3D. O processo fabril garantiu tolerâncias dimensionais exatas nos furos de fixação, nos encaixes da estrutura e nos suportes das guias lineares.
 
-> 📷 ** Projeto CAD 3D no SolidWorks **
+> 📷 Projeto CAD 3D no SolidWorks
 > 
 > ![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)
 
@@ -92,9 +92,9 @@ A programação do CLP Siemens S7-1200 foi desenvolvida em linguagem Ladder no T
   * **`FB2 (MOTOR BLOCK)`:** Bloco responsável pelo acionamento do eixo de movimento (`MOTOR1` / eixo PTO). Contém as instruções `MC_Power` (habilita o driver), `MC_MoveJog` (movimentação manual de subida/descida), `MC_Home` (zeramento de referência) e `MC_MoveAbsolute` (deslocamento absoluto para os 5 andares cadastrados).
   * **`FB1 (LAMPADAS)`:** Controla o acionamento das 4 lâmpadas de sinalização. Utiliza portas lógicas para permitir que as lâmpadas sejam ligadas tanto pelos botões da IHM (`IHM_LAMPADA_x`) quanto pelos comandos vindos do Node-RED.
 
-> 📷 ** Lógica Ladder no TIA Portal **
+> 📷 Lógica Ladder no TIA Portal
 > 
-> `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)
+> ![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)
 
 ---
 
@@ -109,7 +109,7 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
   * **Tela "Setar Andares":** O operador posiciona a cabine no andar desejado utilizando os botões de ajuste manual (`SUBIR`/`DESCER`) e pressiona o botão de gravação correspondente (ex: `1º ANDAR`, `2º ANDAR`, etc.). O comando `MOVE` copia o valor de `%MD2` (`POSICAO_ATUAL`) para a Tag de memória referente àquele andar (`ANDAR1` = `%MD6`, `ANDAR2` = `%MD10`, etc.). Há também a função `ZERAR TODOS` para resetar os *setpoints*.
   * **Tela "Botões" (Chamada de Andares):** Permite acionar o deslocamento automático para qualquer um dos 5 andares cadastrados. Ao clicar no andar, o CLP dispara o bloco `MC_MoveAbsolute` associado àquela coordenada.
 
-> 📷 **[ Telas da Interface Homem-Máquina (IHM) ]**
+> 📷 Telas da Interface Homem-Máquina (IHM)
 > 
 > ![Telas da IHM](docs/telas_ihm.jpg)
 
@@ -121,9 +121,8 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
 * **Tratamento de Pulso e Execução:** Na Network 9 do TIA Portal, a recepção do sinal da Alexa ativa um temporizador `TP` (duração de 5s) que gera o pulso de acionamento (`FN_NR_ANDAR_x`) e limpa o bit de entrada do Node-RED para prevenir retenções de comando.
 * **Priorização Paralela:** Na Network 10, uma porta lógica "OU" une o comando da IHM (`FN_MoveAndar_x`) ao comando do Node-RED (`FN_NR_ANDAR_x`), garantindo que o elevador atenda à solicitação vinda de qualquer uma das duas interfaces.
 
-> 📷 **[ PRINT: Fluxo de Comunicação no Node-RED ]**
+> 📷 PRINT: Fluxo de Comunicação no Node-RED
 > 
-> *Substitua este bloco pelo print do fluxo do Node-RED:*
 > ![Fluxo Node-RED](docs/fluxo_nodered.png)
 
 ---
