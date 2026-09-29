@@ -16,9 +16,8 @@ O controle do sistema é executado por um Controlador Lógico Programável (CLP)
 
 A camada de acessibilidade e inteligência IoT é viabilizada pelo **Node-RED**, que estabelece a comunicação bidirecional entre o CLP e a **Amazon Alexa**, permitindo a chamada dos andares e o monitoramento do sistema totalmente por comando de voz. O resultado é um protótipo funcional, flexível e focado na convergência entre tecnologia industrial e inclusão social.
 
-> 📷 **[ PRINT / FOTO: Maquete Física do Elevador e Painel de Automação ]**
+> 📷 **[ Maquete Física do Elevador e Painel de Automação ]**
 > 
-> *Substitua este bloco pela imagem da maquete física:*
 > `![Maquete do Elevador](docs/maquete_elevador.jpg)`
 
 ---
@@ -30,10 +29,9 @@ A maioria dos elevadores depende exclusivamente de botoeiras físicas para a nav
 
 A proposta deste projeto é unir a confiabilidade da automação industrial — utilizando o CLP Siemens S7-1200 e motor de passo — ao acionamento por voz via Amazon Alexa, além de uma IHM no computador para parametrização. Com essa estrutura, o elevador funciona de forma totalmente *hands-free* (sem uso das mãos), eliminando a dependência de botões físicos e oferecendo uma alternativa acessível para qualquer perfil de usuário.
 
-> 📷 **[ PRINT: Diagrama de Integração do Sistema ]**
+> 📷 **[ Diagrama de Integração do Sistema ]**
 > 
-> *Substitua este bloco pela imagem do diagrama de arquitetura:*
-> `![Diagrama de Integração](docs/diagrama_integracao.png)`
+> `![Diagrama de Integração](docs/diagrama_integracao.jpg)`
 
 ### 🎯 Objetivos
 * **Objetivo Geral:** Desenvolver um protótipo de elevador automatizado focado em acessibilidade, utilizando controle por voz e posicionamento parametrizável por software.
@@ -77,9 +75,8 @@ A proposta deste projeto é unir a confiabilidade da automação industrial — 
 * **Seleção do Material:** A estrutura principal da maquete foi construída em **policarbonato**, escolhido pela elevada resistência mecânica a impactos, rigidez estrutural e transparência — permitindo a visualização clara dos mecanismos internos e da movimentação do elevador.
 * **Corte em Router CNC:** As peças em policarbonato foram usinadas via fresadora CNC a partir do projeto 3D. O processo fabril garantiu tolerâncias dimensionais exatas nos furos de fixação, nos encaixes da estrutura e nos suportes das guias lineares.
 
-> 📷 **[ PRINT / FOTO: Projeto CAD 3D no SolidWorks / Peças Usinadas na CNC ]**
+> 📷 **[ Projeto CAD 3D no SolidWorks ]**
 > 
-> *Substitua este bloco pelas imagens do projeto CAD:*
 > `![Modelo 3D SolidWorks](docs/modelo_cad_3d.png)`
 
 ---
@@ -97,8 +94,7 @@ A programação do CLP Siemens S7-1200 foi desenvolvida em linguagem Ladder no T
 
 > 📷 **[ PRINT: Lógica Ladder no TIA Portal (OB1 / FB2 / FB1) ]**
 > 
-> *Substitua este bloco pelo print do código no TIA Portal:*
-> `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.png)`
+> `![Lógica Ladder TIA Portal](docs/ladder_tia_portal.jpg)`
 
 ---
 
@@ -113,10 +109,9 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
   * **Tela "Setar Andares":** O operador posiciona a cabine no andar desejado utilizando os botões de ajuste manual (`SUBIR`/`DESCER`) e pressiona o botão de gravação correspondente (ex: `1º ANDAR`, `2º ANDAR`, etc.). O comando `MOVE` copia o valor de `%MD2` (`POSICAO_ATUAL`) para a Tag de memória referente àquele andar (`ANDAR1` = `%MD6`, `ANDAR2` = `%MD10`, etc.). Há também a função `ZERAR TODOS` para resetar os *setpoints*.
   * **Tela "Botões" (Chamada de Andares):** Permite acionar o deslocamento automático para qualquer um dos 5 andares cadastrados. Ao clicar no andar, o CLP dispara o bloco `MC_MoveAbsolute` associado àquela coordenada.
 
-> 📷 **[ PRINT: Telas da Interface Homem-Máquina (IHM) ]**
+> 📷 **[ Telas da Interface Homem-Máquina (IHM) ]**
 > 
-> *Substitua este bloco pelos prints das telas da IHM:*
-> `![Telas da IHM](docs/telas_ihm.png)`
+> `![Telas da IHM](docs/telas_ihm.jpg)`
 
 ---
 
