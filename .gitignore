@@ -1,0 +1,9 @@
+# Temporários do TIA Portal
+*.tmp
+*.log
+/AdditionalFiles/
+/Logs/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db

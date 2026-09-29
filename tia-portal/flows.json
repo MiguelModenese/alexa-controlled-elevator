@@ -1,0 +1,218 @@
+[
+    {
+        "id": "efe87760909f6fb8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ff00000000000009",
+        "type": "DuloNodeHub",
+        "z": "efe87760909f6fb8",
+        "name": "",
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "b9b897a29437a7fa",
+                "7acc611d8dc548fb",
+                "610cd13d1cc4d833",
+                "2f90f6eba4bd2a7c",
+                "06c1b3090b607322"
+            ]
+        ]
+    },
+    {
+        "id": "b9b897a29437a7fa",
+        "type": "DuloNodeDevice",
+        "z": "efe87760909f6fb8",
+        "name": "ANDAR 1",
+        "deviceType": "switch",
+        "x": 820,
+        "y": 300,
+        "wires": [
+            [
+                "a89fa1d179712a95"
+            ]
+        ]
+    },
+    {
+        "id": "a89fa1d179712a95",
+        "type": "s7 out",
+        "z": "efe87760909f6fb8",
+        "endpoint": "8596ba7a2468b6b3",
+        "variable": "ANDAR_1",
+        "name": "ANDAR 1",
+        "x": 1060,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7acc611d8dc548fb",
+        "type": "DuloNodeDevice",
+        "z": "efe87760909f6fb8",
+        "name": "ANDAR 2",
+        "deviceType": "switch",
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "6aa8dcf9d14a6383"
+            ]
+        ]
+    },
+    {
+        "id": "610cd13d1cc4d833",
+        "type": "DuloNodeDevice",
+        "z": "efe87760909f6fb8",
+        "name": "ANDAR 3",
+        "deviceType": "switch",
+        "x": 820,
+        "y": 500,
+        "wires": [
+            [
+                "e9cd61b9ca4df11e"
+            ]
+        ]
+    },
+    {
+        "id": "2f90f6eba4bd2a7c",
+        "type": "DuloNodeDevice",
+        "z": "efe87760909f6fb8",
+        "name": "ANDAR 4",
+        "deviceType": "switch",
+        "x": 820,
+        "y": 600,
+        "wires": [
+            [
+                "6661d8f80606f95d"
+            ]
+        ]
+    },
+    {
+        "id": "6aa8dcf9d14a6383",
+        "type": "s7 out",
+        "z": "efe87760909f6fb8",
+        "endpoint": "8596ba7a2468b6b3",
+        "variable": "ANDAR_2",
+        "name": "ANDAR 2",
+        "x": 1060,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e9cd61b9ca4df11e",
+        "type": "s7 out",
+        "z": "efe87760909f6fb8",
+        "endpoint": "8596ba7a2468b6b3",
+        "variable": "ANDAR_3",
+        "name": "ANDAR 3",
+        "x": 1060,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6661d8f80606f95d",
+        "type": "s7 out",
+        "z": "efe87760909f6fb8",
+        "endpoint": "8596ba7a2468b6b3",
+        "variable": "ANDAR_4",
+        "name": "ANDAR 4",
+        "x": 1060,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "06c1b3090b607322",
+        "type": "DuloNodeDevice",
+        "z": "efe87760909f6fb8",
+        "name": "ANDAR 5",
+        "deviceType": "switch",
+        "x": 820,
+        "y": 700,
+        "wires": [
+            [
+                "db7da3454a49a58a"
+            ]
+        ]
+    },
+    {
+        "id": "db7da3454a49a58a",
+        "type": "s7 out",
+        "z": "efe87760909f6fb8",
+        "endpoint": "8596ba7a2468b6b3",
+        "variable": "ANDAR_5",
+        "name": "ANDAR 5",
+        "x": 1060,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8596ba7a2468b6b3",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.0.1",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "CLP SIEMENS - S7-1200",
+        "vartable": [
+            {
+                "addr": "DB3,X0.0",
+                "name": "ANDAR_1"
+            },
+            {
+                "addr": "DB3,X0.1",
+                "name": "ANDAR_2"
+            },
+            {
+                "addr": "DB3,X0.2",
+                "name": "ANDAR_3"
+            },
+            {
+                "addr": "DB3,X0.3",
+                "name": "ANDAR_4"
+            },
+            {
+                "addr": "DB3,X0.4",
+                "name": "ANDAR_5"
+            },
+            {
+                "addr": "DB3,X1.2",
+                "name": "DB_LAMPADA_1"
+            },
+            {
+                "addr": "DB3,X1.3",
+                "name": "DB_LAMPADA_2"
+            },
+            {
+                "addr": "DB3,X1.4",
+                "name": "DB_LAMPADA_3"
+            },
+            {
+                "addr": "DB3,X1.5",
+                "name": "DB_LAMPADA_4"
+            }
+        ]
+    },
+    {
+        "id": "51c03ec3f92ae67b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-dulonode": "1.0.11",
+            "node-red-contrib-s7": "3.1.3"
+        }
+    }
+]
