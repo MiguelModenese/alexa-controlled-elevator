@@ -1,4 +1,4 @@
-# 🛗 Elevador Automatizado com CLP Siemens S7-1200 e Controle por Voz via Alexa para Acessibilidade
+# Elevador Automatizado com CLP Siemens S7-1200 e Controle por Voz via Alexa para Acessibilidade
 
 ![Siemens S7-1200](https://img.shields.io/badge/PLC-Siemens%20S7--1200-006493?style=for-the-badge&logo=siemens)
 ![TIA Portal](https://img.shields.io/badge/Software-TIA%20Portal-003366?style=for-the-badge)
@@ -117,7 +117,7 @@ A IHM foi estruturada para oferecer navegação simples e controle completo sobr
 * **Tratamento de Pulso e Execução:** Na Network 9 do TIA Portal, a recepção do sinal da Alexa ativa um temporizador `TP` (duração de 5s) que gera o pulso de acionamento (`FN_NR_ANDAR_x`) e limpa o bit de entrada do Node-RED para prevenir retenções de comando.
 * **Priorização Paralela:** Na Network 10, uma porta lógica "OU" une o comando da IHM (`FN_MoveAndar_x`) ao comando do Node-RED (`FN_NR_ANDAR_x`), garantindo que o elevador atenda à solicitação vinda de qualquer uma das duas interfaces.
 
-> 📷 PRINT: Fluxo de Comunicação no Node-RED
+> 📷 Fluxo de Comunicação no Node-RED
 > 
 > ![Fluxo Node-RED](docs/fluxo_nodered.png)
 
